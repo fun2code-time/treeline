@@ -1,0 +1,164 @@
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Treeline FM — Fresh. Air. Radio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&amp;display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(180deg, #064e3b, #022c22, #000);
+      color: white;
+      line-height: 1.6;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 30px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    header h1 {
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: white;
+      opacity: 0.8;
+      font-size: 14px;
+    }
+
+    nav a:hover { opacity: 1; }
+
+    .hero {
+      text-align: center;
+      padding: 100px 20px 60px;
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      font-weight: 800;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin: 0 auto 40px;
+      opacity: 0.8;
+    }
+
+    .player {
+      margin: 40px auto;
+      max-width: 500px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 20px;
+    }
+
+    .section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .shows {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 40px auto 0;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 25px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 14px;
+      opacity: 0.6;
+    }
+
+    iframe {
+      width: 100%;
+      height: 160px;
+      border: none;
+      border-radius: 12px;
+    }
+  </style>
+  </head>
+  <body>
+
+  <header>
+    <h1>Treeline FM</h1>
+    <nav>
+      <a href="#listen">Listen</a>
+      <a href="#about">About</a>
+      <a href="#history">Song History</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="listen">
+    <h2>Fresh. Air. Radio</h2>
+    <p>
+      Broadcasting new sounds, underground energy, and fresh vibes 24/7.
+      Welcome to Treeline FM.
+    </p>
+
+    <div class="player">
+      <iframe src="https://treeline.snooks.me/public/station_1/embed" frameborder="0" allowtransparency="true" style="width: 100%; min-height: 150px; height: 150px; border: 0;"></iframe>
+    </div>
+  </section>
+
+
+  <section class="section" id="history">
+    <h3>Recently Played</h3>
+    <p style="opacity:0.8;">Latest tracks from Treeline FM</p>
+    
+    <div style="max-width:700px;margin:30px auto;">
+      <iframe src="https://treeline.snooks.me/public/station_1/history" frameborder="0" allowtransparency="true" style="width: 100%; min-height: 300px; height: 300px; border: 0;"></iframe>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <h3>About Treeline FM</h3>
+    <p style="max-width:600px;margin:20px auto;opacity:0.8;">
+      Treeline FM is an independent radio station focused on fresh music,
+      creative culture, and community voices. We bring you sounds you won’t
+      hear anywhere else.
+    </p>
+  </section>
+    
+  <section class="section" id="contact">
+    <h3>Contact</h3>
+    <p style="opacity:0.8;">Want to collaborate or submit music?</p>
+    <p>Email: lukas@snooks.me</p>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Treeline FM — Fresh. Air. Radio
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+
+
+  </body>
+</html>
